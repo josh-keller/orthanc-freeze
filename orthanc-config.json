@@ -1,0 +1,8 @@
+{
+  "Name": "Orthanc",
+  "RegisteredAet": "ORTHANC",
+  "DicomModalities": {
+    "PACS": ["PACS_AET", "dicom-server", 11112]
+  },
+  "RemoteAccessAllowed": true
+}

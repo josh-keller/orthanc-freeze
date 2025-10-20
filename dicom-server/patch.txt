@@ -1,0 +1,12 @@
+
+# Patch to make C-MOVE-RSP loop endlessly with no progress
+        while True:
+            rsp.Status = 0xFF00
+            rsp.NumberOfRemainingSuboperations = 10
+            rsp.NumberOfFailedSuboperations = 0
+            rsp.NumberOfWarningSuboperations = 0
+            rsp.NumberOfCompletedSuboperations = 0
+            self.dimse.send_msg(rsp, cx_id)
+            time.sleep(1)
+# End patch
+

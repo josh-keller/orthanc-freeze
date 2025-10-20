@@ -1,0 +1,17 @@
+services:
+  orthanc:
+    image: jodogne/orthanc-plugins
+    container_name: test_orthanc
+    ports:
+      - "4042:8042"
+      - "2442:4242"
+    volumes:
+      - ${PWD}/orthanc-config.json:/etc/orthanc/orthanc.json
+    command: ["--trace", "/etc/orthanc/orthanc.json"]
+
+  dicom-server:
+    build:
+      context: ./dicom-server
+    restart: always
+    ports:
+      - "11112:11112"
