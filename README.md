@@ -6,9 +6,9 @@ See the [Orthanc forum discussion](https://discourse.orthanc-server.org/t/frozen
 
 ## Starting and triggering the behavior
 
-You should be able to run `docker compose up` to start the stack. After that, run `bash trigger-freeze.sh` (or run curl commands manually) to trigger the behavior.
-
-The final `curl` command will never return. You can cancel and after that Orthanc should show the "frozen" behaviors described below.
+1. Run `docker compose up`
+2. Trigger the behavior by running `bash trigger-freeze.sh` (or run curl commands manually)
+3. The final `curl` command will never return. You can cancel and after that Orthanc should show the "frozen" behaviors described below.
 
 ## Contents
 
