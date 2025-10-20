@@ -13,3 +13,4 @@ services:
       context: ./dicom-server
     ports:
       - "11112:11112"
+    restart: always
