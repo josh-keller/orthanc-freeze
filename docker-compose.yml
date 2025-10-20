@@ -1,7 +1,6 @@
 services:
   orthanc:
-    image: jodogne/orthanc-plugins
-    container_name: test_orthanc
+    image: jodogne/orthanc-plugins:latest
     ports:
       - "4042:8042"
       - "2442:4242"
@@ -12,6 +11,5 @@ services:
   dicom-server:
     build:
       context: ./dicom-server
-    restart: always
     ports:
       - "11112:11112"
